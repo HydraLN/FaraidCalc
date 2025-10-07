@@ -3,6 +3,7 @@ a Faraid calculator, covering the most basic cases of Inherit, not applying to a
 
 # Roadmap
 <ul>
+  <li>Adding visual disabled for blocked heirs/ashabah</li>
   <li>Improving layout for mobile user</li>
   <li>Adding a section specificly for explanation on the rules</li>
   <li>Create a Footer and Header for easy navigation(i plan to adding more stuff)</li>
