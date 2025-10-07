@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus,
+select:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px #7aa0c4; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e2f;
+    color: #f4faff;
+}
+
+#bigcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #252536;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.style {
+    text-align: center;
+    width: 100%;
+}
+
+p,
+span {
+    font-family: 'Fira Code', monospace;
+    color: #d4d4d4;
+}
+
+h3 {
+    font-family: 'Fira Code', monospace;
+    color: #569cd6; 
+    margin-bottom: 1rem;
+}
+
+
+input[type="number"],
+select {
+    font-family: 'Fira Code', monospace;
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #2d2d3f;
+    color: #f4faff;
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.5)
+}
+
+
+#pilihanak input[type="checkbox"] {
+    background-color: #444a52;
+    
+}
+
+.pilihinput[type="number"] {
+    width: 30%;
+    text-align: center;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007acc;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Fira Code', monospace;
+}
+
+button:hover {
+    background-color: #00538a;
+}
+
+#kotor.active-kotor, #ahliwaris.active-ahliwaris, #harta.active-harta, #wasiat.active-wasiat, #result1.active-result1, #result2.active-result2 {
+    display: block;
+}
+
+#kotor, #wasiat, #ahliwaris, #lastresult, #result3, #result2, #result1, #harta.kill-harta, #kotor.kill-kotor, #ahliwaris.kill-ahliwaris, #pilihanak.kill-pilihanak, #wasiat.kill-wasiat {
+    display: none;
+}
+
+#ahliwaris h3,
+#wasiat h3,
+#kotor h3,
+#harta h3 {
+    margin: 20px;
+}
+
+#pilihcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.option {
+    font-family: 'Fira Code', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #252536;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+.option:hover {
+  background-color: rgb(70, 75, 85);
+  transform: translateY(-2px);
+}
+
+
+.option input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f4faff;
+  border-radius: 1px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+
+.option input[type="checkbox"]:checked {
+  background-color: #4cafef;
+  border-color: #4cafef;
+}
+
+.option input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.pair {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#ahliwaris input {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#lastresult p {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+}
+
+#lastresult .total {
+    font-weight: bold;
+}
+
+#lastresult hr {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid #aaa;
+}
+
+#result1 .substraction {
+    overflow: visible;
+    margin: 0px;
+}
+
+#result1 .substraction::after {
+    background: #252536;
+    position: relative;
+    top: -18px;
+    left: 300px;
+    padding: 0 55px;
+    content: "";
+
+}
+
+.section, #result4 {
+  background: #252536;
+  padding: 16px;
+  margin: 18px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+#result1 span {
+    font-size: 13px;
+}
+
+#resultwaris hr, #result1 .resulthr {
+    margin-bottom: 20px;
+}
+
+
+#result2, #result3, #result4 {
+  margin-bottom: 20px;
+}
+
+.total {
+    background: #2d2d3f;
+    padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.total {
+    width: fit-content;
+}
+
+.inherit, .ashabah, .people {
+  display: flex;
+  background: #2d2d3f;
+  justify-content: space-between;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+#result2 h3, #result3 h3, #result4 h3 {
+font-size: 18px;
+  margin: 10px 0;
+  padding-bottom: 6px;
+  
+}
+
+.inherit {
+  border-left: 4px solid #0077ff; 
+}
+
+.ashabah {
+  border-left: 4px solid #28a745; 
+}
+
+#result4 {
+  display: flex;
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+#result4 p {
+    margin: 6px 0; 
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.p1 {
+    border-left: 4px solid #ffd900; 
+    
+}
+
+.p2 {
+    border-left: 4px solid #ee1919; 
+    
+}

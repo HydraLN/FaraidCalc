@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Faraid</title>
+</head>
+<body>
+    
+    
+
+<div id="bigcontainer">
+    
+    <div id="harta" class="style">
+        <div id="hartacontainer">
+        <label for="gender" >
+        <h3>Jenis kelamin Muwaris</h3>
+    </label>
+    <select id="gender" name="gender" required>
+  <option id="placeholder" value=""disabled selected>Jenis kelamin</option>
+  <option value="laki">Laki-laki</option>
+  <option value="perempuan">Perempuan</option>
+    
+</select>
+
+        <h3>Harta Pewaris</h3>
+    <span>Rp.</span>
+    <input id="jumlah" type="number" value="uang" min="0" placeholder="0" required> 
+    <button class="next">Lanjut</button>
+    </div>
+</div>
+
+
+    <div id="kotor" class="style">
+        <h3>Biaya jenazah</h3>
+        <span>Rp.</span>
+        <input id="jenazah" type="number" value="uangjenazah" min="0" placeholder="0" required> 
+
+        <h3>Hutang</h3>
+        <span>Rp.</span>
+        <input id="hutang" type="number" value="utangnyabayar" min="0" placeholder="0" required>
+<button class="back">Kembali</button>
+<button class="next">Lanjut</button>
+    </div>
+
+    <div id="wasiat" class="style">
+        <h3>Wasiat</h3>
+        <span>Rp.</span>
+        <input id="wasiatinput" type="number" value="totalwasiat" min="0" placeholder="0" required>
+        <button class="back">Kembali</button>
+<button class="next">Lanjut</button>
+    </div>
+    
+
+    <div id="ahliwaris" class="style">
+        <h3>Ahli waris</h3>
+        <div id="pilihan" class="options-row">
+  <div class="option" id="containersuami">
+    <input id="suami" value="ahli-suami" type="checkbox"> Suami
+  </div>
+  <div class="option" id="containeristri">
+    <input id="istri" value="ahli-istri" type="checkbox"> Istri
+  </div>
+  <div class="option">
+    <input id="ayah" value="ahli-ayah" type="checkbox"> Ayah
+  </div>
+  <div class="option">
+    <input id="ibu" value="ahli-ibu" type="checkbox"> Ibu
+  </div>
+  <div class="option">
+    <input id="kakek" value="ahli-kakek" type="checkbox">Kakek
+  </div>
+  <div class="option">
+    <input id="nenek" value="ahli-nenek" type="checkbox">Nenek
+  </div>
+</div>
+
+
+        <div id="pilihanak">
+            <div id="pilihcontainer">
+                <div class="pair">
+  <span>Anak Laki-laki</span>
+  <input id="anaklaki" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+<div class="pair">
+  <span>Anak Perempuan</span>
+  <input id="anakcewe" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+<div class="pair">
+  <span>Cucu Laki-laki</span>
+  <input id="cuculaki" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+<div class="pair">
+  <span>Cucu Perempuan</span>
+  <input id="cucuperempuan" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+<div class="pair">
+  <span>Saudara Laki-laki</span>
+  <input id="saudaralaki" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+<div class="pair">
+  <span>Saudara Perempuan</span>
+  <input id="saudaraperempuan" class="pilihinput" value="0" type="number" min="0">
+</div>
+
+        </div>
+        </div>
+        <button class="back">Kembali</button>
+        <button class="next">Lanjut</button>
+        </div>
+        <div id="lastresult">
+
+<div id="result1" class="section">
+  <h3>Hitung harta total</h3>
+</div>
+<div id="resultwaris" class="section">
+  <h3>Pembagian Warisan</h3>
+  <hr>
+  <div id="result2">
+    <h3>Dzawil Furudh</h3>
+  </div>
+  <div id="result3">
+    <h3>Ashabah</h3>
+  </div>
+</div>
+    <button onClick="window.location.reload();" class="refresh" id="refresh" >Hitung kembali</button>
+</div>
+
+    
+
+
+<script src="rumus.js"></script>
+<script type="module" src="script.js"></script>
+<script src="guard.js"></script>
+</body>
+</html>
